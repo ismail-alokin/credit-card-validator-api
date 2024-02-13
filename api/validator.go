@@ -3,6 +3,7 @@ package api
 import (
 	"fmt"
 	"strconv"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 	"github.com/ismail-alokin/credit-card-validator/utils"
@@ -26,6 +27,7 @@ func CreditCardValidator(c *gin.Context) {
 }
 
 func verifyLuhnsAlgorithm(cardNumber string) (bool, error) {
+	cardNumber = strings.ReplaceAll(cardNumber, " ", "")
 	fmt.Println("Veryfying Card Number: ", cardNumber)
 
 	runes := []rune(cardNumber)
