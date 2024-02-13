@@ -1,0 +1,4 @@
+- Dependencies: Docker and Docker Compose installed in local machine
+- Clone the repo to local folder
+- Run `$ docker compose up`
+- Container with credit card validator API will be spun up and will be available at: localhost:8081/validate
