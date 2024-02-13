@@ -1,0 +1,15 @@
+version: '3.8'
+
+name: go-gin-sample-1
+
+services:
+
+  credit-card-validator:
+    container_name: credit-card-validator
+    build:
+      context: .
+      dockerfile: go.Dockerfile
+    ports:
+      - 8081:8081
+    volumes:
+      - ./:/app
